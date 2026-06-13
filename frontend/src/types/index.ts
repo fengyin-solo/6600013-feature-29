@@ -1,5 +1,18 @@
 export type PatternType = 'spiral' | 'fractal' | 'wave' | 'circles' | 'voronoi' | 'noise'
 
+export type LockableParam =
+  | 'pattern'
+  | 'seed'
+  | 'iterations'
+  | 'scale'
+  | 'rotation'
+  | 'strokeWidth'
+  | 'opacity'
+  | 'bgColor'
+  | 'palette'
+
+export type LockState = Record<LockableParam, boolean>
+
 export interface DesignParams {
   pattern: PatternType
   seed: number
